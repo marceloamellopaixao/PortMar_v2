@@ -201,7 +201,11 @@ footer .title-footer {
     width: 375px;
     height: auto;
     border-radius: 20px;
+    transition: all 0.6s;
+}
 
+.projects-box:hover{
+    transform: scale(1.1);
 }
 
 .projects-content-box {
@@ -238,7 +242,7 @@ footer .title-footer {
 }
 
 .projects-paragraph-box {
-    height: 22vh;
+    height: 240px;
     color: var(--Dark-Content);
     font-size: 18px;
     font-weight: 300;
@@ -365,7 +369,7 @@ hr {
 }
 
 .bottom-footer-p {
-    width: 50%;
+    /* width: 50%; */
     font-family: Poppins;
     font-size: 18px;
     font-style: normal;
