@@ -308,7 +308,7 @@ footer {
 .contact-footer {
     display: flex;
     flex-direction: row;
-    gap: 48px;
+    gap: 20px;
 }
 
 .types-contacts {
@@ -344,7 +344,7 @@ hr {
 
 .bottom-footer {
     margin-top: 62px;
-    display: flex;
+    gap: 20px;
 }
 
 .bottom-footer-ul {
@@ -365,6 +365,7 @@ hr {
 }
 
 .bottom-footer-p {
+    width: 50%;
     font-family: Poppins;
     font-size: 18px;
     font-style: normal;
