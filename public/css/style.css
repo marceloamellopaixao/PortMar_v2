@@ -202,8 +202,8 @@ footer .title-footer {
     background-color: #ffffff;
     box-shadow: #00000034 2px 2px 100px 0;
 
-    width: 310px;
-    height: auto;
+    width: 320px;
+    height: 645px;
     border-radius: 20px;
     transition: all 0.6s;
 }
@@ -213,6 +213,7 @@ footer .title-footer {
 }
 
 .projects-content-box {
+    overflow: hidden;
     display: flex;
     flex-direction: column;
 
@@ -223,7 +224,7 @@ footer .title-footer {
 .projects-box-img {
     border-radius: 20px 20px 0 0;
     max-width: 100%;
-    max-height: 220px;
+    max-height: 195px;
 }
 
 .projects-title-box,
@@ -246,9 +247,9 @@ footer .title-footer {
 }
 
 .projects-paragraph-box {
-    height: 240px;
+    height: 296px;
     color: var(--Dark-Content);
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
 }
 
@@ -266,7 +267,10 @@ footer .title-footer {
 
 .projects-links {
     display: flex;
-    gap: 48px;
+    gap: 21px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .preview-link {
