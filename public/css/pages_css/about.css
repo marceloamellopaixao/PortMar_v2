@@ -1,5 +1,6 @@
 body{
     gap: 124px;
+    font-family: Poppins, sans-serif, Arial, Helvetica;
 }
 
 main{
@@ -19,8 +20,7 @@ main{
 
 .about-title, .work-experience-title, .experience-job, .education-title {
     color: #42446E;
-    font-family: Poppins;
-    font-size: 42px;
+    font-size: 34px;
     font-style: normal;
     font-weight: 700;
     letter-spacing: -1px;
@@ -29,7 +29,6 @@ main{
 .about-paragraph {
     width: 80%;
     color: var(--Dark-Content);
-    font-family: Poppins;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -37,7 +36,7 @@ main{
 
 /* Section - Work Experience */
 .work-experience-content, .education-content{
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 38px;
@@ -95,14 +94,13 @@ main{
 }
 
 .format-job, .format-school {
-    width: 90px;
+    width: 100px;
     height: 30px;
     
     border-radius: 100px;
     background-color: #D7FFE0;
 
     text-align: center;
-    font-family: Poppins;
     font-weight: 600;
     font-size: 14px;
     line-height: 26px;
@@ -115,7 +113,6 @@ main{
 
 .date-job, .date-school{
     color: var(--Dark-Content);
-    font-family: Poppins;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -128,5 +125,21 @@ main{
 }
 
 hr{
-    border: #EBEAED 2px solid;
+    width: 100%;
+    border: #000000 2px solid;
+}
+
+@media (prefers-color-scheme: dark){
+    .about-title, .work-experience-title, .education-title{
+        color: var(--Solid-Heading-DarkMode);
+    }
+
+    .about-paragraph, .experience-job, .experience-company, .experience-local, .date-job, .date-school{
+        color: var(--Light-Content);
+    }
+
+    hr{
+        border: #EBEAED 2px solid;
+
+    }
 }

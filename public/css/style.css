@@ -3,6 +3,10 @@
     --Gradient-Heading: linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%);
     --Dark-Content: #666;
 
+    /* Dark Mode - Variables */
+    --Light-Content: #A7A7A7;
+    --Dark-Mode: #191919;
+    --Solid-Heading-DarkMode: #CCCCCC;
 }
 
 body {
@@ -36,8 +40,7 @@ body {
     gap: 50px;
 }
 
-.cabecalho-logo .cabecalho-title,
-footer .title-footer {
+.cabecalho-logo .cabecalho-title, .span-name {
     background: var(--Gradient-Heading);
     background-clip: text;
     -webkit-background-clip: text;
@@ -91,16 +94,23 @@ footer .title-footer {
 
 /* Main Sobre */
 #about-content {
-    width: 80%;
+    width: 78%;
     height: 350px;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 38px;
 }
 
-.about-subtitle {
+.about-title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.about-subtitle, .span-name {
     font-family: Poppins;
     font-size: 40px;
     font-style: normal;
@@ -119,12 +129,12 @@ footer .title-footer {
 /* Section Tech Stack */
 .tech-content,
 .projects-content {
-    width: 80%;
+    width: 78%;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    gap: 140px;
+    gap: 65px;
 }
 
 .tech-text,
@@ -190,20 +200,16 @@ footer .title-footer {
 }
 
 /* Section Projects */
-.projects-content{
-    width: 95%;
-}
-
 
 .projects-box {
     display: flex;
     flex-direction: column;
 
     background-color: #ffffff;
-    box-shadow: #00000034 2px 2px 100px 0;
+    filter: drop-shadow(12px 8px 20px #00000034);
 
-    width: 320px;
-    height: 645px;
+    width: 370px;
+    /* height: 100%; */
     border-radius: 20px;
     transition: all 0.6s;
 }
@@ -224,7 +230,7 @@ footer .title-footer {
 .projects-box-img {
     border-radius: 20px 20px 0 0;
     max-width: 100%;
-    max-height: 195px;
+    height: 210px;
 }
 
 .projects-title-box,
@@ -246,11 +252,23 @@ footer .title-footer {
     overflow: hidden;
 }
 
+.projects-content-text{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 .projects-paragraph-box {
-    height: 296px;
     color: var(--Dark-Content);
     font-size: 16px;
     font-weight: 300;
+    align-self: stretch;
+}
+
+.projects-content-tech {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .projects-tech-stack {
@@ -262,7 +280,7 @@ footer .title-footer {
 .projects-tech-stack span {
     color: var(--Solid-Heading);
     font-size: 16px;
-    font-weight: 400;
+    font-weight: bold;
 }
 
 .projects-links {
@@ -303,9 +321,16 @@ footer .title-footer {
 
 /* Footer */
 footer {
-    width: 80%;
+    width: 78%;
     display: flex;
     flex-direction: column;
+}
+
+.title-footer{
+    text-decoration: none;
+    font-family: "DM Sans";
+    font-size: 21px;
+    color: #000000;
 }
 
 .top-footer,
@@ -324,12 +349,17 @@ footer {
 }
 
 .types-contacts {
-    color: #000000;
+    color: var(--Solid-Heading);
     font-family: DM Sans;
     font-weight: 300;
     font-size: 16px;
     line-height: 26px;
     text-decoration: none;
+    transition: all 0.4s;
+}
+
+.types-contacts:hover{
+    color: #000000;
 }
 
 .icons-footer {
@@ -349,9 +379,10 @@ footer {
     transform: scale(1.2);
 }
 
-.footer-hr {
+.footer-hr, hr {
     width: 100%;
-    border: #141414 2px solid;
+    border-radius: 10px;
+    border: var(--Solid-Heading) 2px solid;
 }
 
 .bottom-footer {
@@ -370,16 +401,20 @@ footer {
     text-decoration: none;
 
     font-family: "DM Sans";
-    font-size: 14px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     color: var(--Dark-Content);
 }
 
+.bottom-footer-li a:hover{
+    color: #000000;
+}
+
 .bottom-footer-p {
     /* width: 50%; */
     font-family: Poppins;
-    font-size: 14px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     color: var(--Dark-Content);
@@ -397,6 +432,109 @@ footer {
 }
 
 /* Change Mode */
+@media (prefers-color-scheme: dark) {
+    body{
+        background: var(--Dark-Mode);
+    }
+
+    .cabecalho-menu .cabecalho-ul li a{
+        color: var(--Light-Content);
+    }
+
+    .cabecalho-menu .cabecalho-ul li a:hover{
+        color: #fff;
+    }
+
+    .about-subtitle{
+        color: #D9D9D9;
+    }
+
+    /* Titulos */
+    .tech-subtitle, .projects-subtitle{
+        color: var(--Solid-Heading-DarkMode);
+    }
+
+    /* Paragrafos Textos */
+    .tech-paragraph, .projects-paragraph{
+        color: var(--Light-Content);
+    }
+
+    
+    /* Projetos */
+    .projects-box{
+        background: #363636;
+        border-radius: 20px;
+        filter: drop-shadow(12px 8px 6px white);
+    }
+
+    .projects-title-box, .projects-paragraph-box{
+        color: var(--Solid-Heading-DarkMode);
+    }
+
+    .projects-tech-stack, .projects-tech-stack span {
+        color: var(--Solid-Heading-DarkMode);
+    }
+
+    .preview-link a{
+        color: #ffffff;
+    }
+
+    .img-preview-link{
+        filter: drop-shadow(0 0 2px #fff) brightness(75%);
+    }
+
+    /* Tecnologias */
+
+    .tech-item {
+        filter: drop-shadow(#fff 0 0 2px);
+    }
+
+    /* Footer */
+    .title-footer{
+        text-decoration: none;
+        font-family: "DM Sans";
+        font-size: 21px;
+        color: #FFFFFF;
+    }
+
+    .types-contacts{
+        color: var(--Light-Content);
+    }
+
+    .types-contacts:hover {
+        color: #fff;
+    }
+
+    .footer-hr {
+        border: var(--Dark-Content) 2px solid;
+    }
+
+    .bottom-footer-ul li::before,
+    .bottom-footer-ul li::after {
+        border-color: rgba(255, 255, 255, 0.16);
+    }
+
+    .bottom-footer-li a{
+        color: var(--Light-Content);
+        transition: all 0.4s;
+    }
+
+    .bottom-footer-li a:hover {
+        color: white;
+    }
+
+    .bottom-footer-p {
+        color: var(--Light-Content);
+    }    
+
+    /* Contact */
+    .contact-info{
+        color: #ffffff;
+    }
+}
+
+/*
+
 .dark-mode {
     background-color: #333;
     color: #fff;
@@ -408,5 +546,7 @@ footer {
 }
 
 .theme-change span:hover {
-    color: #ff9800; /* Cor desejada ao passar o mouse */
-}
+    color: #ff9800; 
+} 
+
+*/

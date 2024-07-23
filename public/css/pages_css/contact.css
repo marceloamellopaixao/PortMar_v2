@@ -1,0 +1,34 @@
+body{
+    gap: 170px;
+}
+
+.content-contact {
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.content-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-info{
+    font-family: DM Sans;
+    font-size: 34px;
+    font-weight: bold;
+    color: #1E0E62;
+}
+
+.contact-email{
+    background: var(--Gradient-Heading);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "DM Sans";
+    font-size: 28px;
+    transition: all 0.8s;
+}
